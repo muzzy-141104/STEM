@@ -3,7 +3,7 @@
 ## 1. Dataset Overview
 
 ### 1.1 Sample Size and Composition
-- Total samples: 20,000
+- Total samples: 50,000
 - Geographic coverage: 15 major agricultural regions worldwide
 - Time period: Multi-seasonal data
 
@@ -155,7 +155,7 @@
 
 ## 7. Conclusion
 
-The analysis demonstrates that soil erosion can be predicted with reasonable accuracy using machine learning models. The Random Forest model provides the best balance of performance and interpretability. The dataset size of 20,000 samples provides sufficient coverage for training robust models, though expansion to more regions could improve generalizability.
+The analysis demonstrates that soil erosion can be predicted with reasonable accuracy using machine learning models. The Random Forest model provides the best balance of performance and interpretability. The dataset size of 50,000 samples provides sufficient coverage for training robust models, though expansion to more regions could improve generalizability.
 
 The key factors influencing soil erosion are:
 1. Slope characteristics
