@@ -25,11 +25,14 @@ st.markdown("""
     .stButton>button {border-radius: 4px; padding: 8px 16px;}
     .stSelectbox, .stNumberInput, .stSlider {margin-bottom: 15px;}
     .prediction-card {border-radius: 8px; padding: 20px; margin-bottom: 20px; 
-                      box-shadow: 0 4px 6px rgba(0,0,0,0.1);}
-    .best-model {border-left: 5px solid #4CAF50; background-color: #f8fff8;}
+                      box-shadow: 0 4px 6px rgba(0,0,0,0.1); color: #222 !important; background: #fff;}
+    .best-model {border-left: 5px solid #4CAF50; background-color: #f8fff8; color: #222 !important;}
     .feature-importance-plot {margin-top: 20px;}
     .header-text {color: #2c3e50; font-weight: 700;}
     .subheader-text {color: #3498db; font-weight: 600;}
+    .red-text {color: #e74c3c;}
+    .green-text {color: #27ae60;}
+    .blue-text {color: #2980b9;}
 </style>
 """, unsafe_allow_html=True)
 
@@ -58,34 +61,34 @@ model_performance = {
 # Visualization data
 visualizations = {
     "Basic Analysis": [
-        ('erosion_distribution.png', 'Erosion Distribution'),
-        ('correlation_heatmap.png', 'Feature Correlation Heatmap'),
-        ('erosion_by_landuse.png', 'Erosion by Land Use Type')
+        ('public/erosion_distribution.png', 'Erosion Distribution'),
+        ('public/correlation_heatmap.png', 'Feature Correlation Heatmap'),
+        ('public/erosion_by_landuse.png', 'Erosion by Land Use Type')
     ],
     "Enhanced Visualizations": [
-        ('top_features_scatter.png', 'Top Features vs Erosion'),
-        ('feature_distributions.png', 'Feature Distributions'),
-        ('enhanced_correlation.png', 'Enhanced Correlation Matrix'),
-        ('land_use_boxplot.png', 'Land Use Impact Boxplot'),
-        ('geographic_distribution.png', 'Geographic Distribution'),
-        ('enhanced_feature_importance.png', 'Feature Importance'),
-        ('enhanced_residual_plot.png', 'Model Residuals')
+        ('public/top_features_scatter.png', 'Top Features vs Erosion'),
+        ('public/feature_distributions.png', 'Feature Distributions'),
+        ('public/enhanced_correlation.png', 'Enhanced Correlation Matrix'),
+        ('public/land_use_boxplot.png', 'Land Use Impact Boxplot'),
+        ('public/geographic_distribution.png', 'Geographic Distribution'),
+        ('public/enhanced_feature_importance.png', 'Feature Importance'),
+        ('public/enhanced_residual_plot.png', 'Model Residuals')
     ],
     "Model Performance": [
-        ('model_performance.png', 'Model Comparison'),
-        ('model_errors.png', 'Model Error Analysis')
+        ('public/model_performance.png', 'Model Comparison'),
+        ('public/model_errors.png', 'Model Error Analysis')
     ],
     "Feature Importance": [
-        ('feature_importance_random_forest.png', 'Random Forest'),
-        ('feature_importance_xgboost.png', 'XGBoost'),
-        ('feature_importance_gradient_boosting.png', 'Gradient Boosting'),
-        ('feature_importance_neural_network.png', 'Neural Network')
+        ('public/feature_importance_random_forest.png', 'Random Forest'),
+        ('public/feature_importance_xgboost.png', 'XGBoost'),
+        ('public/feature_importance_gradient_boosting.png', 'Gradient Boosting'),
+        ('public/feature_importance_neural_network.png', 'Neural Network')
     ],
     "Prediction Accuracy": [
-        ('prediction_accuracy_random_forest.png', 'Random Forest'),
-        ('prediction_accuracy_xgboost.png', 'XGBoost'),
-        ('prediction_accuracy_gradient_boosting.png', 'Gradient Boosting'),
-        ('prediction_accuracy_neural_network.png', 'Neural Network')
+        ('public/prediction_accuracy_random_forest.png', 'Random Forest'),
+        ('public/prediction_accuracy_xgboost.png', 'XGBoost'),
+        ('public/prediction_accuracy_gradient_boosting.png', 'Gradient Boosting'),
+        ('public/prediction_accuracy_neural_network.png', 'Neural Network')
     ]
 }
 

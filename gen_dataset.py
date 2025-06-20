@@ -348,7 +348,7 @@ def create_performance_visualizations(results):
     plt.ylabel('R² Score')
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('model_performance.png')
+    plt.savefig('public/model_performance.png')
     plt.close()
     
     # Plot error metrics
@@ -358,7 +358,7 @@ def create_performance_visualizations(results):
     plt.ylabel('Error')
     plt.xticks(rotation=45)
     plt.tight_layout()
-    plt.savefig('model_errors.png')
+    plt.savefig('public/model_errors.png')
     plt.close()
 
 def create_feature_importance_visualizations(feature_importance, features):
@@ -375,7 +375,7 @@ def create_feature_importance_visualizations(feature_importance, features):
         sns.barplot(x='importance', y='feature', data=importance_df)
         plt.title(f'Feature Importance - {model_name}')
         plt.tight_layout()
-        plt.savefig(f'feature_importance_{model_name.lower().replace(" ", "_")}.png')
+        plt.savefig(f'public/feature_importance_{model_name.lower().replace(" ", "_")}.png')
         plt.close()
 
 def create_prediction_visualizations(models, X_test, y_test, features):
@@ -392,7 +392,7 @@ def create_prediction_visualizations(models, X_test, y_test, features):
         plt.ylabel('Predicted Erosion Rate')
         plt.title(f'Actual vs Predicted Erosion Rates - {name}')
         plt.tight_layout()
-        plt.savefig(f'prediction_accuracy_{name.lower().replace(" ", "_")}.png')
+        plt.savefig(f'public/prediction_accuracy_{name.lower().replace(" ", "_")}.png')
         plt.close()
 
 def create_feature_correlation_visualization(df):
@@ -403,7 +403,7 @@ def create_feature_correlation_visualization(df):
     sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f')
     plt.title('Feature Correlation Matrix')
     plt.tight_layout()
-    plt.savefig('feature_correlation.png')
+    plt.savefig('public/feature_correlation.png')
     plt.close()
 
 def create_advanced_visualizations(model, X, y, features, df):
@@ -429,7 +429,7 @@ def create_advanced_visualizations(model, X, y, features, df):
         plt.colorbar(hb, ax=axes[idx], label='Count')
     
     plt.tight_layout()
-    plt.savefig('top_features_scatter.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/top_features_scatter.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Enhanced scatter plot matrix saved as 'top_features_scatter.png'")
 
@@ -445,7 +445,7 @@ def create_advanced_visualizations(model, X, y, features, df):
         axes[idx].set_title(f'Distribution of {feature}')
     
     plt.tight_layout()
-    plt.savefig('feature_distributions.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/feature_distributions.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Distribution plots saved as 'feature_distributions.png'")
 
@@ -458,7 +458,7 @@ def create_advanced_visualizations(model, X, y, features, df):
                 fmt='.2f', square=True, linewidths=.5)
     plt.title('Correlation Matrix of Top Features')
     plt.tight_layout()
-    plt.savefig('enhanced_correlation.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/enhanced_correlation.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Enhanced correlation heatmap saved as 'enhanced_correlation.png'")
 
@@ -473,7 +473,7 @@ def create_advanced_visualizations(model, X, y, features, df):
     plt.xticks(rotation=45)
     plt.title('Erosion Rate Distribution by Land Use')
     plt.tight_layout()
-    plt.savefig('land_use_boxplot.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/land_use_boxplot.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Enhanced box plots saved as 'land_use_boxplot.png'")
 
@@ -488,7 +488,7 @@ def create_advanced_visualizations(model, X, y, features, df):
     plt.xlabel('Longitude')
     plt.ylabel('Latitude')
     plt.tight_layout()
-    plt.savefig('geographic_distribution.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/geographic_distribution.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Enhanced geographic distribution saved as 'geographic_distribution.png'")
 
@@ -504,7 +504,7 @@ def create_advanced_visualizations(model, X, y, features, df):
     plt.title('Feature Importance')
     plt.xlabel('Importance Score')
     plt.tight_layout()
-    plt.savefig('enhanced_feature_importance.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/enhanced_feature_importance.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Enhanced feature importance plot saved as 'enhanced_feature_importance.png'")
 
@@ -520,7 +520,7 @@ def create_advanced_visualizations(model, X, y, features, df):
     plt.ylabel('Residuals')
     plt.title('Residual Plot')
     plt.tight_layout()
-    plt.savefig('enhanced_residual_plot.png', dpi=300, bbox_inches='tight')
+    plt.savefig('public/enhanced_residual_plot.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("Enhanced residual plot saved as 'enhanced_residual_plot.png'")
 
